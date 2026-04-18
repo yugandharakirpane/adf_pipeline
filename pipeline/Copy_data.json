@@ -1,0 +1,220 @@
+{
+	"name": "Copy_data",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "heera//"
+					},
+					{
+						"name": "Destination",
+						"value": "heera-output//"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ""
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "teacher_id",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "teacher_id",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "teacher_email",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "teacher_email",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "teacher_mobile",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "teacher_mobile",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "teacher_name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "teacher_name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "JoiningDate",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "JoiningDate",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "teacher_status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "teacher_status",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "city",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "city",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "state",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "state",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "teacher_level",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "teacher_level",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "teacher_all_level",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "teacher_all_level",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "is_mentor",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "is_mentor",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "is_director",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "is_director",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "input_dataset_excel",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_CSV",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-13T18:17:35Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

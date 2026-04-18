@@ -1,0 +1,23 @@
+{
+	"name": "DS_DESTINATION_CSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_STORAGE_CONNECTIONS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "destination"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

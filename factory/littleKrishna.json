@@ -1,0 +1,9 @@
+{
+	"name": "littleKrishna",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c4ee737d-3925-4faa-b729-2052ac02aafe",
+		"tenantId": "b797d49b-f2f5-4c2c-972d-82979b756403"
+	}
+}
