@@ -15,6 +15,34 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_BLOB_STORAGE_CONNECTIONS'"
 		},
+		"LS_SQLDB_CONNECTION_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLDB_CONNECTION'"
+		},
+		"LS_ADLSGEN2_CONNECTION_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLSGEN2_CONNECTION'"
+		},
+		"LS_SQLDB_CONNECTION_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "agastyasqlserver.database.windows.net"
+		},
+		"LS_SQLDB_CONNECTION_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "agastya_sql_db"
+		},
+		"LS_SQLDB_CONNECTION_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "agastya"
+		},
+		"LS_ADLSGEN2_CONNECTION_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://bentensa.dfs.core.windows.net/"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -47,6 +75,27 @@
 					},
 					"LS_BLOB_STORAGE_CONNECTIONS_connectionString": {
 						"value": "[parameters('LS_BLOB_STORAGE_CONNECTIONS_connectionString')]"
+					},
+					"LS_SQLDB_CONNECTION_password": {
+						"value": "[parameters('LS_SQLDB_CONNECTION_password')]"
+					},
+					"LS_ADLSGEN2_CONNECTION_accountKey": {
+						"value": "[parameters('LS_ADLSGEN2_CONNECTION_accountKey')]"
+					},
+					"LS_SQLDB_CONNECTION_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLDB_CONNECTION_properties_typeProperties_server')]"
+					},
+					"LS_SQLDB_CONNECTION_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLDB_CONNECTION_properties_typeProperties_database')]"
+					},
+					"LS_SQLDB_CONNECTION_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLDB_CONNECTION_properties_typeProperties_userName')]"
+					},
+					"LS_ADLSGEN2_CONNECTION_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLSGEN2_CONNECTION_properties_typeProperties_url')]"
+					},
+					"HttpServer1_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
 					}
 				}
 			},

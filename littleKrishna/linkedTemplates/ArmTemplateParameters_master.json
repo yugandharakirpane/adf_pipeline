@@ -11,6 +11,27 @@
 		"LS_BLOB_STORAGE_CONNECTIONS_connectionString": {
 			"value": ""
 		},
+		"LS_SQLDB_CONNECTION_password": {
+			"value": ""
+		},
+		"LS_ADLSGEN2_CONNECTION_accountKey": {
+			"value": ""
+		},
+		"LS_SQLDB_CONNECTION_properties_typeProperties_server": {
+			"value": "agastyasqlserver.database.windows.net"
+		},
+		"LS_SQLDB_CONNECTION_properties_typeProperties_database": {
+			"value": "agastya_sql_db"
+		},
+		"LS_SQLDB_CONNECTION_properties_typeProperties_userName": {
+			"value": "agastya"
+		},
+		"LS_ADLSGEN2_CONNECTION_properties_typeProperties_url": {
+			"value": "https://bentensa.dfs.core.windows.net/"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
 		"containerUri": {
 			"value": ""
 		},
