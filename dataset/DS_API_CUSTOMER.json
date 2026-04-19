@@ -1,0 +1,27 @@
+{
+	"name": "DS_API_CUSTOMER",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSGEN2_CONNECTION",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folder_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('retail/bronze/', dataset().folder_name)",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
