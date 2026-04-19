@@ -158,7 +158,7 @@
 			}
 		],
 		"variables": {
-			"config_list ": {
+			"config_list": {
 				"type": "Array",
 				"defaultValue": [
 					{
