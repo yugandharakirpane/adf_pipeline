@@ -19,11 +19,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().p_filename",
+					"value": "@concat('bronze/',dataset().p_filename)",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().p_destination_folder",
+					"value": "@concat('bronze/',dataset().p_destination_folder)",
 					"type": "Expression"
 				},
 				"fileSystem": "awproject"
