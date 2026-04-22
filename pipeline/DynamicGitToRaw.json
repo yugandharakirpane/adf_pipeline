@@ -32,7 +32,16 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
+							"userProperties": [
+								{
+									"name": "Source",
+									"value": "@{item().p_rel_url}"
+								},
+								{
+									"name": "Destination",
+									"value": "awproject/@{concat('bronze/',item().p_sink_folder)}/item().p_sink_file"
+								}
+							],
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",

@@ -23,7 +23,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat('bronze/',dataset().p_destination_folder)",
+					"value": "@concat('bronze/',dataset().p_destination_folder)\n\n",
 					"type": "Expression"
 				},
 				"fileSystem": "awproject"
